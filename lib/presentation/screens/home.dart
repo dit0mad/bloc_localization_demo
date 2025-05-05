@@ -5,14 +5,24 @@ import 'package:localization_demo/blocs/l10n_bloc/bloc.dart';
 import 'package:localization_demo/blocs/l10n_bloc/models/language_model.dart';
 import 'package:localization_demo/l10n/app_localizations.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final bloc = context.read<LanguageBloc>();
-    final currentLanguage = context.watch<LanguageBloc>().state.currentLanguage;
+  State<MyHomePage> createState() => _MyHomePageState();
+}
 
+class _MyHomePageState extends State<MyHomePage> {
+  late final LanguageBloc bloc;
+  @override
+  void initState() {
+    bloc = context.read<LanguageBloc>();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final currentLanguage = context.watch<LanguageBloc>().state.currentLanguage;
 
     return Scaffold(
       appBar: AppBar(
