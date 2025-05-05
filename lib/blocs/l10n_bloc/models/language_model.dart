@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 class LanguageModel {
   final String code;
   final String name;
@@ -15,4 +17,6 @@ class LanguageModel {
       name: 'Spanish',
     ),
   ];
+
+  Locale get locale => Locale(code);
 }

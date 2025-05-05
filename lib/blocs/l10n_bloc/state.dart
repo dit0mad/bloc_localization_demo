@@ -1,4 +1,4 @@
-import 'package:localization_demo/blocs/l10n_bloc/model/language_model.dart';
+import 'package:localization_demo/blocs/l10n_bloc/models/language_model.dart';
 
 //lets define our states
 
