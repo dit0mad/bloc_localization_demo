@@ -32,6 +32,7 @@ class LanguageBloc extends Bloc<BaseLanguageAction, LanguageState> {
 
         final nextState = state.copyWith(
           currentLanguage: savedLanguage,
+          status: LanguageStatus.initialized,
         );
 
         emit(nextState);
