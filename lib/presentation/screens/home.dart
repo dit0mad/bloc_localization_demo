@@ -14,6 +14,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late final LanguageBloc bloc;
+
   @override
   void initState() {
     bloc = context.read<LanguageBloc>();
