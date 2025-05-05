@@ -1,4 +1,5 @@
 {
+  "appTitle" : "Localization Demo",
   "helloUser": "Hello User",
   "selectLanguage": "Select Language",
   "english": "English",
