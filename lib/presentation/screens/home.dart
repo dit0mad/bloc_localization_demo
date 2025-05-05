@@ -17,8 +17,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    bloc = context.read<LanguageBloc>();
     super.initState();
+    bloc = context.read<LanguageBloc>();
   }
 
   @override
