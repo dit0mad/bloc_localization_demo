@@ -3,5 +3,6 @@
   "helloUser": "Hola Usuario",
   "selectLanguage": "Seleccionar idioma",
   "english": "Inglés",
-  "spanish": "Español"
+  "spanish": "Español",
+  "error" : "Error"
 }

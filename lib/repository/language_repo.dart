@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../blocs/l10n_bloc/model/language_model.dart';
+import '../blocs/l10n_bloc/models/language_model.dart';
 
 class LanguageRepository {
   static const String _key = 'language_code';
@@ -22,7 +22,11 @@ class LanguageRepository {
   }
 
   Future<bool> saveLanguage(String languageCode) async {
-    final prefs = await SharedPreferences.getInstance();
-    return await prefs.setString(_key, languageCode);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      return await prefs.setString(_key, languageCode);
+    } catch (e) {
+      throw Exception('Failed to save language preference: $e');
+    }
   }
 }
