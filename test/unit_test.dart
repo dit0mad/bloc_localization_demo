@@ -29,7 +29,7 @@ void main() {
   late MockLanguageRepository mockRepository;
   late LanguageBloc languageBloc;
 
-  const spanishLanguage = LanguageModel(code: 'es', name: 'Spanish');
+  const spanish = LanguageModel(code: 'es', name: 'Spanish');
 
   setUp(() {
     mockRepository = MockLanguageRepository();
@@ -50,7 +50,7 @@ void main() {
       'should emit new state when language is changed',
       build: () => languageBloc,
       act: (bloc) =>
-          bloc.add(const ChangeLanguageAction(language: spanishLanguage)),
+          bloc.add(const ChangeLanguageAction(language: spanish)),
       expect: () => [
         predicate<LanguageState>((state) =>
             state.currentLanguage.code == 'es' &&
@@ -65,7 +65,7 @@ void main() {
         return languageBloc;
       },
       act: (bloc) =>
-          bloc.add(const ChangeLanguageAction(language: spanishLanguage)),
+          bloc.add(const ChangeLanguageAction(language: spanish)),
       expect: () => [
         predicate<LanguageState>((state) => state.currentLanguage.code == 'es'),
         predicate<LanguageState>(
