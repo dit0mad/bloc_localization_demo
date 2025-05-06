@@ -25,6 +25,9 @@ class MyApp extends StatelessWidget {
 
         if (state.status == LanguageStatus.error) {
           return MaterialApp(
+            locale: const Locale('en'),
+            supportedLocales: AppLocalizations.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
             home: Scaffold(
               appBar: AppBar(
                 title: const Text('Error'),
