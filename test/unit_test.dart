@@ -6,7 +6,6 @@ import 'package:localization_demo/blocs/l10n_bloc/models/language_model.dart';
 import 'package:localization_demo/blocs/l10n_bloc/state.dart';
 import 'package:localization_demo/repository/language_repo.dart';
 
-// Simple mock class (no code generation required)
 class MockLanguageRepository extends LanguageRepository {
   bool throwOnSave = false;
   bool throwOnGet = false;
